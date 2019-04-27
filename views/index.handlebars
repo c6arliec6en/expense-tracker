@@ -1,0 +1,112 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-10 card card-body">
+      <div class="row justify-content-center ">
+        <div class="btn-group mr-2 ml-2">
+          <button type="button " class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            月份
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mr-2 ml-2">
+          <button type="button" class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            類別
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row justify-content-center align-items-center mt-3">
+        <h5 class="mr-5 ">總金額:</h5>
+        <h1 class=""> 2000000</p>
+      </div>
+
+      {{#each records}}
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between col-8">
+              <div class="row">
+                {{{this.category}}}
+                <div class="ml-3">
+                  <p>{{{this.name}}}</p>
+                  <p>{{{this.date}}}</p>
+                </div>
+              </div>
+
+
+
+              <div class="row align-items-center">
+                <p>{{{this.amount}}}</p>
+              </div>
+
+            </div>
+            <div class="row">
+              <a href="/records/edit/{{{this._id}}}" class="btn btn-info">編輯</a>
+              <form action="" method="POST">
+                <button type="submit" class="btn btn-danger">刪除</button>
+              </form>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+      {{/each}}
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between col-8">
+              <div class="row">
+                <i class="fas fa-utensils fa-4x"></i>
+                <div class="ml-3">
+                  <p>午餐</p>
+                  <p>時間</p>
+                </div>
+              </div>
+
+
+
+              <div class="row align-items-center">
+                <p>價格</p>
+              </div>
+
+            </div>
+            <div class="row">
+              <a href="/records/edit/this" class="btn btn-info">編輯</a>
+              <form action="" method="POST">
+                <button type="submit" class="btn btn-danger">刪除</button>
+              </form>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
