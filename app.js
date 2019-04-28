@@ -28,7 +28,7 @@ require('./config/passport')(passport)
 app.use('/', express.static('public'))
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/record', { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/record', { useNewUrlParser: true, useCreateIndex: true })
 
 const db = mongoose.connection
 
@@ -61,6 +61,6 @@ app.use('/users/', require('./routes/user'))
 app.use('/filter', require('./routes/filter'))
 app.use('/auth', require('./routes/auths'))
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('express running')
 })
