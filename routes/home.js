@@ -5,12 +5,10 @@ const authenticated = require('../config/auth')
 
 
 router.get('/', authenticated, (req, res) => {
-  Records.find({ userId: req.user._id }, (err, records) => {
+  Records.find({ userId: req.user._id }).sort({ date: 'desc' }).exec((err, records) => {
     if (err) console.log('Load home page err')
     res.render('index', { records: records })
   })
 })
-
-
 
 module.exports = router

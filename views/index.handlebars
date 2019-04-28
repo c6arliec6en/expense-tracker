@@ -40,33 +40,33 @@
       </div>
       <div class="row justify-content-center align-items-center mt-3">
         <h5 class="mr-5 ">總金額:</h5>
-        <h1 data-amount="sum">0</h1>
+        <h1 data-amount="sum" class="sum">0</h1>
         <p>$</p>
       </div>
 
       {{#each records}}
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-center ">
+        <div class="record-style">
+          <div class="row justify-content-around align-items-center">
             <div class="row justify-content-between col-8">
-              <div class="row">
-                <div class="col-md-5">
-                  <p class="category">{{{this.category}}}</p>
+              <div class="row col-md-12">
+                <div class="align-self-center col-md-5">
+                  <p class="category m-auto">{{{this.category}}}</p>
                 </div>
                 
-                <div class="ml-3">
-                  <p>{{{this.name}}}</p>
-                  <p>{{{this.date}}}</p>
+                <div class="ml-3 align-self-center">
+                  <p class="m-auto">{{{this.name}}}</p>
+                  <p class="m-auto">{{{this.date}}}</p>
                 </div>
               </div>
 
               <div class="row align-items-center">
-                <p data-amount="expense">{{{this.amount}}}</p>
-                <p>$</p>
+                <p data-amount="expense" class="m-auto fa-1x record-amount">{{{this.amount}}}</p>
+                <p class="m-auto record-amount">$</p>
               </div>
 
             </div>
-            <div class="row">
+            <div class="row btn-list">
               <a href="/records/edit/{{{this._id}}}" class="btn btn-info">編輯</a>
               <form action="/records/delete/{{{this.id}}}" method="POST">
                 <button type="submit" class="btn btn-danger">刪除</button>
