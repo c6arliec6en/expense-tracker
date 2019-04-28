@@ -4,37 +4,43 @@
       "name": "龍蝦",
       "category": "food",
       "date": "2019-10-10",
-      "amount": "50"
+      "amount": "50",
+      "userId": "5cc55ae1a7da4c0d693676b3"
     },
     {
       "name": "遊樂園票券",
       "category": "leisure",
       "date": "2019-10-10",
-      "amount": "50"
+      "amount": "50",
+      "userId": "5cc55ae1a7da4c0d693676b3"
     },
     {
       "name": "火車票",
       "category": "travel",
       "date": "2019-10-10",
-      "amount": "100"
+      "amount": "100",
+      "userId": "5cc55ae1a7da4c0d693676b3"
     },
     {
       "name": "掃把",
       "category": "home",
       "date": "2019-10-10",
-      "amount": "30"
+      "amount": "30",
+      "userId": "5cc55ae1a7da4c0d693676b3"
     },
     {
       "name": "神秘禮物",
       "category": "other",
       "date": "2019-10-10",
-      "amount": "10000"
+      "amount": "10000",
+      "userId": "5cc51f84799c54011dcefca9"
     },
     {
       "name": "神秘禮物",
       "category": "other",
       "date": "2019-01-10",
-      "amount": "10000"
+      "amount": "10000",
+      "userId": "5cc55ae1a7da4c0d693676b3"
     }
   ]
 }

@@ -20,7 +20,8 @@ db.once('open', () => {
       name: recordsData[i].name,
       category: recordsData[i].category,
       date: recordsData[i].date,
-      amount: recordsData[i].amount
+      amount: recordsData[i].amount,
+      userId: recordsData[i].userId
     })
   }
 })
