@@ -8,11 +8,18 @@
             月份
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <a class="dropdown-item" href="/filter/month/01">一月</a>
+            <a class="dropdown-item" href="/filter/month/02">二月</a>
+            <a class="dropdown-item" href="/filter/month/03">三月</a>
+            <a class="dropdown-item" href="/filter/month/04">四月</a>
+            <a class="dropdown-item" href="/filter/month/05">五月</a>
+            <a class="dropdown-item" href="/filter/month/06">六月</a>
+            <a class="dropdown-item" href="/filter/month/07">七月</a>
+            <a class="dropdown-item" href="/filter/month/08">八月</a>
+            <a class="dropdown-item" href="/filter/month/09">九月</a>
+            <a class="dropdown-item" href="/filter/month/10">十月</a>
+            <a class="dropdown-item" href="/filter/month/11">十一月</a>
+            <a class="dropdown-item" href="/filter/month/12">十二月</a>
           </div>
         </div>
 
@@ -22,19 +29,18 @@
             類別
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <a class="dropdown-item" href="/filter/category/home">家居物業</a>
+            <a class="dropdown-item" href="/filter/category/travel">交通出行</a>
+            <a class="dropdown-item" href="/filter/category/leisure">休閒娛樂</a>
+            <a class="dropdown-item" href="/filter/category/food">餐飲食品</a>
+            <a class="dropdown-item" href="/filter/category/other">休閒娛樂</a>
           </div>
         </div>
-
 
       </div>
       <div class="row justify-content-center align-items-center mt-3">
         <h5 class="mr-5 ">總金額:</h5>
-        <h1 class=""> 2000000</p>
+        <h1 data-amount="sum">0</h1>
       </div>
 
       {{#each records}}
@@ -43,7 +49,11 @@
           <div class="row justify-content-between align-items-center">
             <div class="row justify-content-between col-8">
               <div class="row">
-                {{{this.category}}}
+                <div class="col-md-5">
+                  <p class="category">{{{this.category}}}</p>
+                </div>
+                
+
                 <div class="ml-3">
                   <p>{{{this.name}}}</p>
                   <p>{{{this.date}}}</p>
@@ -53,13 +63,13 @@
 
 
               <div class="row align-items-center">
-                <p>{{{this.amount}}}</p>
+                <p data-amount="expense">{{{this.amount}}}</p>
               </div>
 
             </div>
             <div class="row">
               <a href="/records/edit/{{{this._id}}}" class="btn btn-info">編輯</a>
-              <form action="" method="POST">
+              <form action="/records/delete/{{{this.id}}}" method="POST">
                 <button type="submit" class="btn btn-danger">刪除</button>
               </form>
             </div>
@@ -72,41 +82,11 @@
 
       </div>
       {{/each}}
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <div class="row justify-content-between align-items-center">
-            <div class="row justify-content-between col-8">
-              <div class="row">
-                <i class="fas fa-utensils fa-4x"></i>
-                <div class="ml-3">
-                  <p>午餐</p>
-                  <p>時間</p>
-                </div>
-              </div>
-
-
-
-              <div class="row align-items-center">
-                <p>價格</p>
-              </div>
-
-            </div>
-            <div class="row">
-              <a href="/records/edit/this" class="btn btn-info">編輯</a>
-              <form action="" method="POST">
-                <button type="submit" class="btn btn-danger">刪除</button>
-              </form>
-            </div>
-
-
-
-          </div>
-        </div>
-
-
-      </div>
     </div>
 
   </div>
 
 </div>
+
+<script src="/javascripts/sum.js"></script>
+<script src="/javascripts/img.js"></script>

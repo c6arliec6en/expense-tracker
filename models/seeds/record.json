@@ -2,32 +2,38 @@
   "results": [
     {
       "name": "龍蝦",
-      "category": "飲食食品",
-      "date": "2019/10/10",
+      "category": "food",
+      "date": "2019-10-10",
       "amount": "50"
     },
     {
       "name": "遊樂園票券",
-      "category": "休閒娛樂",
-      "date": "2019/10/10",
+      "category": "leisure",
+      "date": "2019-10-10",
       "amount": "50"
     },
     {
       "name": "火車票",
-      "category": "交通出行",
-      "date": "2019/10/10",
+      "category": "travel",
+      "date": "2019-10-10",
       "amount": "100"
     },
     {
       "name": "掃把",
-      "category": "家居物業",
-      "date": "2019/10/10",
+      "category": "home",
+      "date": "2019-10-10",
       "amount": "30"
     },
     {
       "name": "神秘禮物",
-      "category": "其他",
-      "date": "2019/10/10",
+      "category": "other",
+      "date": "2019-10-10",
+      "amount": "10000"
+    },
+    {
+      "name": "神秘禮物",
+      "category": "other",
+      "date": "2019-01-10",
       "amount": "10000"
     }
   ]

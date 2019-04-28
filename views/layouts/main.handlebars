@@ -14,9 +14,29 @@
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       廣志の私帳
     </a>
+
+    {{#if isAuthenticated}}
+    <div>
+      <p class="m-auto">Hi {{{user.name}}}</p>
+    </div>
+    {{/if}}
+
+    <div>
+      {{#if isAuthenticated}}
+      <form action="/users/logout" method="POST">
+        <a href="/records/new" class="btn btn-primary mr-3">Create</a>
+
+        <button type="submit" class="btn btn-primary mr-3">Logout</button>
+      </form>
+
+      {{else}}
+      <a href="/users/login" class="btn btn-primary">Login</a>
+      {{/if}}
+
+    </div>
   </nav>
   {{{body}}}
 
@@ -29,6 +49,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

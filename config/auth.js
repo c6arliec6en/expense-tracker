@@ -3,7 +3,7 @@ function authenticated(req, res, next) {
     return next()
   }
   console.log(req)
-  req.flash('warning_msg', '請先登入')
+  // req.flash('warning_msg', '請先登入')
   res.redirect('/users/login')
 }
 
