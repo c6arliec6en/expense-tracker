@@ -41,6 +41,7 @@
       <div class="row justify-content-center align-items-center mt-3">
         <h5 class="mr-5 ">總金額:</h5>
         <h1 data-amount="sum">0</h1>
+        <p>$</p>
       </div>
 
       {{#each records}}
@@ -53,17 +54,15 @@
                   <p class="category">{{{this.category}}}</p>
                 </div>
                 
-
                 <div class="ml-3">
                   <p>{{{this.name}}}</p>
                   <p>{{{this.date}}}</p>
                 </div>
               </div>
 
-
-
               <div class="row align-items-center">
                 <p data-amount="expense">{{{this.amount}}}</p>
+                <p>$</p>
               </div>
 
             </div>
@@ -74,11 +73,8 @@
               </form>
             </div>
 
-
-
           </div>
         </div>
-
 
       </div>
       {{/each}}

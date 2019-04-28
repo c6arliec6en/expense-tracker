@@ -9,16 +9,36 @@ router.get('/new', authenticated, (req, res) => {
 
 router.post('/new', authenticated, (req, res) => {
   const { name, category, date, amount } = req.body
-  const newRecord = new Records({
-    name,
-    category,
-    date,
-    amount,
-  })
-  newRecord.save(err => {
-    if (err) return console.log(err)
-    return res.redirect('/')
-  })
+  const userId = req.user._id
+
+  errors = []
+
+  if (!name || !category || !date || !amount) {
+    errors.push({ message: '所有欄位必填' })
+  }
+
+  if (isNaN(parseInt(amount)) === true) {
+    errors.push({ message: '金額請輸入數字' })
+  }
+
+  if (errors.length > 0) {
+    res.render('new', {
+      name, category, date, amount, errors
+    })
+  } else {
+    const newRecord = new Records({
+      name,
+      category,
+      date,
+      amount,
+      userId
+    })
+    newRecord.save(err => {
+      if (err) return console.log(err)
+      return res.redirect('/')
+    })
+  }
+
 
 })
 

@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const passport = require('passport')
 const session = require('express-session')
 const flash = require('connect-flash')
+const hbsHelper = require('handlebars-helpers')
 
 if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模式
   require('dotenv').config()                      // 使用 dotenv 讀取 .env 檔案
@@ -37,8 +38,8 @@ db.on('error', () => {
 
 db.once('open', () => {
   console.log('db connecting')
-
 })
+
 
 app.use((req, res, next) => {
   res.locals.user = req.user
@@ -47,6 +48,7 @@ app.use((req, res, next) => {
   res.locals.warning_msg = req.flash('warning_msg')
   next()
 })
+
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
