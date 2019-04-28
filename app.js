@@ -2,6 +2,21 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const passport = require('passport')
+const session = require('express-session')
+
+
+app.use(session({
+  secret: 'great',
+  resave: 'false',
+  saveUninitialized: 'false',
+}))
+
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+require('./config/passport')(passport)
 
 // load js and css
 app.use('/', express.static('public'))
