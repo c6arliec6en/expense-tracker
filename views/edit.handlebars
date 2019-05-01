@@ -18,11 +18,11 @@
         <div class="form-group mt-3">
           <label for="category">*類別:</label>
           <select class="form-control" id="category" name="category" required>
-            <option value="home">家居物業</option>
-            <option value="travel">交通出行</option>
-            <option value="leisure">休閒娛樂</option>
-            <option value="food">餐飲食品</option>
-            <option value="other">其他</option>
+            <option value="home" {{#compare record.category '==' 'home'}}selected{{/compare}}>家居物業</option>
+            <option value="travel" {{#compare record.category  '==' 'travel'}}selected{{/compare}}>交通出行</option>
+            <option value="leisure" {{#compare record.category  '==' 'leisure'}}selected{{/compare}}>休閒娛樂</option>
+            <option value="food" {{#compare record.category  '==' 'food'}}selected{{/compare}}>餐飲食品</option>
+            <option value="other" {{#compare record.category  '==' 'other'}}selected{{/compare}}>其他</option>
           </select>
         </div>
 

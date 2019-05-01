@@ -4,7 +4,9 @@ const Records = require('../models/record')
 const authenticated = require('../config/auth')
 
 router.get('/new', authenticated, (req, res) => {
-  res.render('new')
+  let date = new Date()
+  date = date.toISOString().slice(0, 10)
+  res.render('new', { date })
 })
 
 router.post('/new', authenticated, (req, res) => {

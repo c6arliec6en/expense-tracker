@@ -8,6 +8,7 @@
             月份
           </button>
           <div class="dropdown-menu">
+            <a class="dropdown-item" href="/">顯示全部</a>
             <a class="dropdown-item" href="/filter/month/01">一月</a>
             <a class="dropdown-item" href="/filter/month/02">二月</a>
             <a class="dropdown-item" href="/filter/month/03">三月</a>
@@ -22,6 +23,35 @@
             <a class="dropdown-item" href="/filter/month/12">十二月</a>
           </div>
         </div>
+
+        <form action="/filter" data-filter="form">
+          <select class="form-control" id="category" name="category" data-filter="choose">
+            <option value="" {{#compare category '==' ''}}selected{{/compare}}>所有類別</option>
+            <option value="home" {{#compare category '==' 'home'}}selected{{/compare}}>家居物業</option>
+            <option value="travel" {{#compare category '==' 'travel'}}selected{{/compare}}>交通出行</option>
+            <option value="leisure" {{#compare category '==' 'leisure'}}selected{{/compare}}>休閒娛樂</option>
+            <option value="food" {{#compare category '==' 'food'}}selected{{/compare}}>餐飲食品</option>
+            <option value="other" {{#compare category '==' 'other'}}selected{{/compare}}>其他</option>
+          </select>
+
+          <select class="form-control" id="month" name="month" data-filter="choose">
+            <option value="" {{#compare month '==' ''}}selected{{/compare}}>所有月份</option>
+            <option value="01" {{#compare month '==' '01'}}selected{{/compare}}>一月</option>
+            <option value="02" {{#compare month '==' '02'}}selected{{/compare}}>二月</option>
+            <option value="03" {{#compare month '==' '03'}}selected{{/compare}}>三月</option>
+            <option value="04" {{#compare month '==' '04'}}selected{{/compare}}>四月</option>
+            <option value="05" {{#compare month '==' '05'}}selected{{/compare}}>五月</option>
+            <option value="06" {{#compare month '==' '06'}}selected{{/compare}}>六月</option>
+            <option value="07" {{#compare month '==' '07'}}selected{{/compare}}>七月</option>
+            <option value="08" {{#compare month '==' '08'}}selected{{/compare}}>八月</option>
+            <option value="09" {{#compare month '==' '09'}}selected{{/compare}}>九月</option>
+            <option value="10" {{#compare month '==' '10'}}selected{{/compare}}>十月</option>
+            <option value="11" {{#compare month '==' '11'}}selected{{/compare}}>十一月</option>
+            <option value="12" {{#compare month '==' '12'}}selected{{/compare}}>十二月</option>
+          </select>
+
+        </form>
+
 
         <div class="btn-group mr-2 ml-2">
           <button type="button" class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
@@ -84,5 +114,6 @@
 
 </div>
 
-<script src="/javascripts/sum.js"></script>
+<script <script src="/javascripts/sum.js"></script>
 <script src="/javascripts/img.js"></script>
+<script src="/javascripts/onclick.js"></script>
