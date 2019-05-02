@@ -1,31 +1,10 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-10 card card-body">
-      <div class="row justify-content-center ">
-        <div class="btn-group mr-2 ml-2">
-          <button type="button " class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            月份
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/">顯示全部</a>
-            <a class="dropdown-item" href="/filter/month/01">一月</a>
-            <a class="dropdown-item" href="/filter/month/02">二月</a>
-            <a class="dropdown-item" href="/filter/month/03">三月</a>
-            <a class="dropdown-item" href="/filter/month/04">四月</a>
-            <a class="dropdown-item" href="/filter/month/05">五月</a>
-            <a class="dropdown-item" href="/filter/month/06">六月</a>
-            <a class="dropdown-item" href="/filter/month/07">七月</a>
-            <a class="dropdown-item" href="/filter/month/08">八月</a>
-            <a class="dropdown-item" href="/filter/month/09">九月</a>
-            <a class="dropdown-item" href="/filter/month/10">十月</a>
-            <a class="dropdown-item" href="/filter/month/11">十一月</a>
-            <a class="dropdown-item" href="/filter/month/12">十二月</a>
-          </div>
-        </div>
+      <div class="row justify-content-center">
 
-        <form action="/filter" data-filter="form">
-          <select class="form-control" id="category" name="category" data-filter="choose">
+        <form action="/filter" data-filter="form" class="">
+          <select class="choose" id="category" name="category" data-filter="choose">
             <option value="" {{#compare category '==' ''}}selected{{/compare}}>所有類別</option>
             <option value="home" {{#compare category '==' 'home'}}selected{{/compare}}>家居物業</option>
             <option value="travel" {{#compare category '==' 'travel'}}selected{{/compare}}>交通出行</option>
@@ -34,7 +13,7 @@
             <option value="other" {{#compare category '==' 'other'}}selected{{/compare}}>其他</option>
           </select>
 
-          <select class="form-control" id="month" name="month" data-filter="choose">
+          <select class="choose" id="month" name="month" data-filter="choose">
             <option value="" {{#compare month '==' ''}}selected{{/compare}}>所有月份</option>
             <option value="01" {{#compare month '==' '01'}}selected{{/compare}}>一月</option>
             <option value="02" {{#compare month '==' '02'}}selected{{/compare}}>二月</option>
@@ -51,22 +30,6 @@
           </select>
 
         </form>
-
-
-        <div class="btn-group mr-2 ml-2">
-          <button type="button" class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            類別
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/filter/category/home">家居物業</a>
-            <a class="dropdown-item" href="/filter/category/travel">交通出行</a>
-            <a class="dropdown-item" href="/filter/category/leisure">休閒娛樂</a>
-            <a class="dropdown-item" href="/filter/category/food">餐飲食品</a>
-            <a class="dropdown-item" href="/filter/category/other">其他</a>
-          </div>
-        </div>
-
       </div>
       <div class="row justify-content-center align-items-center mt-3">
         <h5 class="mr-5 ">總金額:</h5>

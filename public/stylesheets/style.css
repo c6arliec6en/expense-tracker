@@ -16,3 +16,11 @@
 .sum {
   color: rgb(255, 0, 0)
 }
+
+.choose {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100px;
+  height: 30px;
+  color: rgb(156, 152, 152)
+}
